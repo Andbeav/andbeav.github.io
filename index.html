@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>andbeav.co.za</title>
 
     <style>
-        html { background-color: whitesmoke; }
-        body { margin: 0; }
+        html {
+            background-color: whitesmoke;
+        }
+
+        body {
+            margin: 0;
+        }
+
         a {
             color: blue;
             text-decoration: unset;
         }
 
         .container {
-            display: flex;
+            display: grid;
+            grid-template: '.' '.';
             align-items: center;
             justify-content: center;
             width: -webkit-fill-available;
@@ -24,28 +32,40 @@
         .content {
             padding: 20px;
             max-width: 80%;
+            justify-self: center;
             text-align: center;
             background-color: white;
         }
 
-        .content h1, p {
+        .content h1,
+        p {
             color: black;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin-top: 0;
         }
-        .content p { margin: 0; }
-        .content a:hover { text-decoration: underline; }
+
+        .content p {
+            margin: 0;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="content">
             <h1>I'm Andbeav 👋</h1>
             <p>South African software engineer and gamer.</p>
-            <p>Occasionally working on personal <a href="https://github.com/Andbeav?tab=repositories" target="_blank">projects</a>.</p>
+            <p>Occasionally working on personal <a href="https://github.com/Andbeav?tab=repositories"
+                    target="_blank">projects</a>.</p>
             <br>
-            <p>If you need to contact me, <a href="https://discord.com/users/657137820825026580" target="_blank">discord</a> will be your best bet.</p>
+            <p>If you need to contact me, <a href="https://discord.com/users/657137820825026580"
+                    target="_blank">discord</a> will be your best bet.</p>
         </div>
     </div>
 </body>
+
 </html>
