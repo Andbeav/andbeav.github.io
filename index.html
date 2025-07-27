@@ -7,17 +7,32 @@
     <title>andbeav.co.za</title>
 
     <style>
-        html {
-            background-color: whitesmoke;
+        :root {
+            --bg-color: whitesmoke;
+            --fg-color: white;
+            --text-color: black;
+            --link-color: blue;
         }
 
-        body {
+        html, body {
+            background-color: var(--bg-color);
             margin: 0;
         }
 
         a {
-            color: blue;
+            color: var(--link-color);
             text-decoration: unset;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            padding-left: 5px;
+            width: 100%;
+
+            background-color: var(--bg-color);
+            font-family: sans-serif;
+            font-size: x-small;
         }
 
         .container {
@@ -33,12 +48,12 @@
             padding: 20px;
             justify-self: center;
             text-align: center;
-            background-color: white;
+            background-color: var(--fg-color);
         }
 
         .content h1,
         p {
-            color: black;
+            color: var(--text-color);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin-top: 0;
         }
@@ -65,6 +80,7 @@
                     target="_blank">discord</a> will be your best bet.</p>
         </div>
     </div>
+    <footer>&copy; 2025 Andbeav</footer>
 </body>
 
 </html>
