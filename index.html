@@ -14,25 +14,52 @@
             --link-color: blue;
         }
 
-        html, body {
+        body:has(#theme:checked) {
+            --bg-color: #1b1b1b;
+            --fg-color: #2b2b2b;
+            --text-color: white;
+            --link-color: orange;
+        }
+
+        body {
             background-color: var(--bg-color);
             margin: 0;
         }
 
-        a {
-            color: var(--link-color);
-            text-decoration: unset;
+        input {
+            display: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 5px;
+
+            font-size: large;
+            filter: grayscale(1);
         }
 
         footer {
             position: fixed;
             bottom: 0;
-            padding-left: 5px;
+            padding-bottom: 5px;
             width: 100%;
 
             background-color: var(--bg-color);
+            color: var(--text-color);
             font-family: sans-serif;
             font-size: x-small;
+            text-align: center;
+        }
+
+        label:hover {
+            cursor: pointer;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: unset;
         }
 
         .container {
@@ -69,6 +96,10 @@
 </head>
 
 <body>
+    <input id="theme" type="checkbox">
+    <header>
+        <label for="theme">🌓</label>
+    </header>
     <div class="container">
         <div class="content">
             <h1>I'm Andbeav 👋</h1>
@@ -76,8 +107,8 @@
             <p>Occasionally working on personal <a href="https://github.com/Andbeav?tab=repositories"
                     target="_blank">projects</a>.</p>
             <br>
-            <p>If you need to contact me, <a href="https://discord.com/users/657137820825026580"
-                    target="_blank">discord</a> will be your best bet.</p>
+            <p>If you need to contact me, <a href="https://discord.com/users/657137820825026580" target="_blank"
+                    title="@andbeav">discord</a> will be your best bet.</p>
         </div>
     </div>
     <footer>&copy; 2025 Andbeav</footer>
