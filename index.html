@@ -8,17 +8,43 @@
 
     <style>
         :root {
-            --bg-color: whitesmoke;
-            --fg-color: white;
-            --text-color: black;
-            --link-color: blue;
+            --light-bg: whitesmoke;
+            --light-fg: white;
+            --light-text: black;
+            --light-link: blue;
+
+            --dark-bg: #1b1b1b;
+            --dark-fg: #2b2b2b;
+            --dark-text: white;
+            --dark-link: orange;
+
+            --bg-color: var(--light-bg);
+            --fg-color: var(--light-fg);
+            --text-color: var(--light-text);
+            --link-color: var(--light-link);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: var(--dark-bg);
+                --fg-color: var(--dark-fg);
+                --text-color: var(--dark-text);
+                --link-color: var(--dark-link);
+            }
+
+            body:has(#theme:checked) {
+                --bg-color: var(--light-bg) !important;
+                --fg-color: var(--light-fg) !important;
+                --text-color: var(--light-text) !important;
+                --link-color: var(--light-link) !important;
+            }
         }
 
         body:has(#theme:checked) {
-            --bg-color: #1b1b1b;
-            --fg-color: #2b2b2b;
-            --text-color: white;
-            --link-color: orange;
+            --bg-color: var(--dark-bg);
+            --fg-color: var(--dark-fg);
+            --text-color: var(--dark-text);
+            --link-color: var(--dark-link);
         }
 
         body {
